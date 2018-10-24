@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 
 import {Observable, of} from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import {Hero} from './hero';
 import {HEROES} from './mock-heroes';
@@ -20,9 +21,11 @@ export class HeroService {
         return of(HEROES);
     }
 
-    getHero(id: number | string): Observable<Hero> {
+    getHero(id: number | string) {
         // TODO: send the message _after_ fetching the hero
-        this.messageService.add(`HeroService: fetched hero id=${id}`);
-        return of(HEROES.find(hero => hero.id === id));
+        return this.getHeroes().pipe(
+            // (+) before `id` turns the string into a number
+            map((heroes: Hero[]) => heroes.find(hero => hero.id === +id))
+        );
     }
 }
