@@ -1,7 +1,8 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BaseLayoutRoutingModule} from './base-layout.routing.module';
-import {MatSidenavContainer, MatSidenavContent, MatSidenav} from '@angular/material';
+import {MatSidenavContainer, MatSidenavContent, MatSidenav, MatToolbarModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
 
 import {BaseLayoutComponent} from './base-layout.component';
 import {HeaderComponent} from '../../Component/header/header.component';
@@ -10,6 +11,8 @@ import {HeaderComponent} from '../../Component/header/header.component';
     imports: [
         CommonModule,
         BaseLayoutRoutingModule,
+        MatToolbarModule,
+        MatButtonModule,
     ],
     declarations: [
         BaseLayoutComponent,

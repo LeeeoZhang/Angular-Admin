@@ -6,10 +6,12 @@ import {MatSidenavContainer, MatSidenavContent, MatSidenav} from '@angular/mater
     templateUrl: './base-layout.component.html',
     styleUrls: ['./base-layout.component.scss']
 })
-export class BaseLayoutComponent  {
+export class BaseLayoutComponent {
 
     constructor() {
     }
+
+    isShowMask: true;
 
     @ViewChild(MatSidenav)
     private sidenavContent: MatSidenav;

@@ -1,5 +1,5 @@
-<mat-sidenav-container class="base-layout-wrapper">
-    <mat-sidenav mode="side" class="base-layout-sidenav">sidenav</mat-sidenav>
+<mat-sidenav-container class="base-layout-wrapper" [hasBackdrop]="isShowMask">
+    <mat-sidenav mode="over" class="base-layout-sidenav">sidenav</mat-sidenav>
     <mat-sidenav-content class="base-layout-content">
         <app-header></app-header>
         <button (click)="openSlide()">open slide</button>

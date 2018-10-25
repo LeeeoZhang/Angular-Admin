@@ -1,10 +1,10 @@
 .base-layout-wrapper {
   min-height: 100vh;
   .base-layout-sidenav {
+    width: 256px;
     background: orange;
   }
   .base-layout-content {
-    background: pink;
     min-height: 100vh;
     overflow-x: hidden;
   }
