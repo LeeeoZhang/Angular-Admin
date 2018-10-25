@@ -1,0 +1,11 @@
+.base-layout-wrapper {
+  min-height: 100vh;
+  .base-layout-sidenav {
+    background: orange;
+  }
+  .base-layout-content {
+    background: pink;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
